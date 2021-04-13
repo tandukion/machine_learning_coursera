@@ -22,7 +22,7 @@ grad = X' * (sigmoid(X*theta) - y) ./ m;
 
 % regularization
 n =  size(theta,1);
-J = J + lambda * (theta(2:n,1)'*theta(2:size(theta,1),1)) / (2*m);
+J = J + lambda * (theta(2:n,1)'*theta(2:n,1)) / (2*m);
 grad(2:n,1) = grad(2:n,1) + theta(2:n,1) .* lambda/m;
 
 % =============================================================
